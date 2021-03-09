@@ -1,0 +1,68 @@
+STOIAN MIRUNA MARIA
+315 CB
+Linux Filesystem
+
+MAIN
+Citesc numarul de comanzi ce urmeaza a fii citite de la tastatura
+si pentru fiecare in parte aplic operatiile specitice.
+Citesc pana la sfarsitul fiecarui rand si impart numele directoarelor prin delimitatori cu ajutorul functiei strtok .
+Inainte de a insera un nou director sau fisier verific existenta acestora. In cazul directoarelor verific daca acestea incep cu "/",
+iar daca incep salvez numele acestora de la urmatorul caracter.
+La intalnirea comenzii cd se verifica calea actuala si verific daca pot sa efectuez comenzille si existenta directorului in care urmeaza sa intru. Daca acestea nu sunt intalnite sau conditiile neindeplinite afisez mesajul de aroare.
+La sfarsit eliberez memoria folosita.
+
+aloca
+Declar o variabila de tip trie si o aloc. Verific alocarea . Daca nu s-a reusit returnez NULL. Daca a reusit ii sterez campurile pe 0 si NULL.
+
+GetContor
+Primesc ca marametru un caracter de tip char si verific daca este litera,cifra sau punct. In functie de ce este, returnez valoarea specifica.
+
+GetChar
+Primesc ca parametru o variabila de tip int si verific daca este cifra, litera sau punct si in functie de ce este returnez valoarea specifica.
+
+InsertDirector
+Primesc ca parametrii arborele si numele directorului. Declar o variabila auxiliara in care copiez arborele initial. Cat timp valoare stringului este diferita de NULL si caracterul diferit  daca este "/"
+il adaug in arbore si setez campurile .
+
+InsertFile
+Primesc ca parametrii arborele si numele fisierului.Declar o variabila auxiliara in care copiez arborele primit.Cat timp valoarea stringului nu este nula si este diferita de "/" adaug in arbore.La final setez campul corespunzator.
+
+SearchDirector si SearchFile
+Primesc ca parametrii arborele si numele directorului/fisierului.
+Declar si initializez o variabila auxiliara Cat timp stringul nu este NULL si este diferit de "/" variabila "contor" ia valoarea stringului si se parcurge arborele.
+La final returnez valoarea de la campul specific (va fi 1 daca acesta exista si a fost gasit si 0 altfel).
+
+CautaCale
+Declar o si initializez o variabila auxiliara cu valoarea arborelui primit ca parametru, calculez lungimea .
+Parcurg de la 0 pana la lungime , verific sa fie diferit de " " si parcurg arborele. La final returnez arborele.
+
+
+PrintTrie
+Verific daca este director sau fisier si ii afisez.	Parcurg pana la numarul maxim si cat timp se poate inainta in arbore apelez recursiv functia si cresc nivelul.
+
+List
+Declar o variabila pe care o initializez cu rezultatul apelarii CautaCale.
+Parcurg pana la numarul maxim si cat timp se poate inainta in arbore apelez functia PrintTrie.
+
+verifica_alfa
+Verivic daca primul caracter dintr-un cunavnt este "/";
+Daca este returnez 1 , altfel 0.
+
+FreeAll
+Verific ca valoarea arborelui sa fie diferita de NULL. Daca este iau fiecare copil si ii eliberez memoria. La sfarsit eliberez memoria ocupata de arbore.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
